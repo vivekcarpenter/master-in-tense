@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continuous & Perfect Continuous Tenses – Master Chart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Laila:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hindi-font {
+            font-family: 'Laila', serif;
+            font-weight: 500;
+        }
+        /* Styles for the modal */
+        #exampleModal.hidden {
+            display: none;
+        }
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-slate-100 p-4 sm:p-6 md:p-8">
+
+    <div class="max-w-7xl mx-auto bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-slate-200">
+
+        <!-- Main Title -->
+        <div class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-800">Continuous & Perfect Continuous Tenses</h1>
+            <p class="text-lg md:text-xl text-slate-600 font-semibold">Interactive Master Chart</p>
+        </div>
+
+        <!-- Sections Container -->
+        <div class="space-y-8">
+
+            <!-- I. Continuous Tenses -->
+            <section class="border-2 border-slate-300 rounded-xl p-4 md:p-6 bg-slate-50/50">
+                <h2 class="text-2xl font-bold text-blue-700 mb-1">I. Continuous Tenses</h2>
+                <p class="text-slate-500 font-medium mb-4 italic">(Action is happening at that time)</p>
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse text-sm md:text-base">
+                        <thead class="bg-blue-100 text-blue-800">
+                            <tr>
+                                <th class="border border-slate-300 p-3 font-semibold text-left">Time</th>
+                                <th class="border border-slate-300 p-3 font-semibold text-left">Formula</th>
+                                <th class="border border-slate-300 p-3 font-semibold text-left">Examples (+ / – / ?)</th>
+                                <th class="border border-slate-300 p-3 font-semibold text-left">Practice</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white">
+                                <td class="border border-slate-300 p-3 font-semibold">Present Continuous</td>
+                                <td class="border border-slate-300 p-3 font-mono bg-slate-50">S + is/are/am + V-ing</td>
+                                <td class="border border-slate-300 p-3">She <span class="text-green-600 font-medium">is reading</span>. / She <span class="text-red-600 font-medium">isn’t reading</span>. / <span class="text-blue-600 font-medium">Is</span> she <span class="text-blue-600 font-medium">reading</span>?</td>
+                                <td class="border border-slate-300 p-3 text-center"><button onclick="generateExamples('Present Continuous')" class="bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-600 transition-colors text-xs font-semibold">✨ Generate</button></td>
+                            </tr>
+                            <tr class="bg-white">
+                                <td class="border border-slate-300 p-3 font-semibold">Past Continuous</td>
+                                <td class="border border-slate-300 p-3 font-mono bg-slate-50">S + was/were + V-ing</td>
+                                <td class="border border-slate-300 p-3">I <span class="text-green-600 font-medium">was writing</span>. / I <span class="text-red-600 font-medium">wasn’t writing</span>. / <span class="text-blue-600 font-medium">Was</span> I <span class="text-blue-600 font-medium">writing</span>?</td>
+                                <td class="border border-slate-300 p-3 text-center"><button onclick="generateExamples('Past Continuous')" class="bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-600 transition-colors text-xs font-semibold">✨ Generate</button></td>
+                            </tr>
+                            <tr class="bg-white">
+                                <td class="border border-slate-300 p-3 font-semibold">Future Continuous</td>
+                                <td class="border border-slate-300 p-3 font-mono bg-slate-50">S + will be + V-ing</td>
+                                <td class="border border-slate-300 p-3">They <span class="text-green-600 font-medium">will be waiting</span>. / They <span class="text-red-600 font-medium">won’t be waiting</span>. / <span class="text-blue-600 font-medium">Will</span> they <span class="text-blue-600 font-medium">be waiting</span>?</td>
+                                <td class="border border-slate-300 p-3 text-center"><button onclick="generateExamples('Future Continuous')" class="bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-600 transition-colors text-xs font-semibold">✨ Generate</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- II. Perfect Continuous Tenses -->
+            <section class="border-2 border-slate-300 rounded-xl p-4 md:p-6 bg-slate-50/50">
+                <h2 class="text-2xl font-bold text-purple-700 mb-1">II. Perfect Continuous Tenses</h2>
+                <p class="text-slate-500 font-medium mb-4 italic">(Action started earlier & still going / duration focus)</p>
+                 <div class="overflow-x-auto">
+                    <table class="w-full border-collapse text-sm md:text-base">
+                        <thead class="bg-purple-100 text-purple-800">
+                            <tr>
+                                <th class="border border-slate-300 p-3 font-semibold text-left">Time</th>
+                                <th class="border border-slate-300 p-3 font-semibold text-left">Formula</th>
+                                <th class="border border-slate-300 p-3 font-semibold text-left">Examples (+ / – / ?)</th>
+                                <th class="border border-slate-300 p-3 font-semibold text-left">Practice</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white">
+                                <td class="border border-slate-300 p-3 font-semibold">Present Perfect Continuous</td>
+                                <td class="border border-slate-300 p-3 font-mono bg-slate-50">S + have/has been + V-ing</td>
+                                <td class="border border-slate-300 p-3">I <span class="text-green-600 font-medium">have been studying</span> for 2 hrs. / I <span class="text-red-600 font-medium">haven’t been studying</span>. / <span class="text-blue-600 font-medium">Have</span> I <span class="text-blue-600 font-medium">been studying</span>?</td>
+                                <td class="border border-slate-300 p-3 text-center"><button onclick="generateExamples('Present Perfect Continuous')" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600 transition-colors text-xs font-semibold">✨ Generate</button></td>
+                            </tr>
+                            <tr class="bg-white">
+                                <td class="border border-slate-300 p-3 font-semibold">Past Perfect Continuous</td>
+                                <td class="border border-slate-300 p-3 font-mono bg-slate-50">S + had been + V-ing</td>
+                                <td class="border border-slate-300 p-3">She <span class="text-green-600 font-medium">had been working</span> before lunch. / She <span class="text-red-600 font-medium">hadn’t been working</span>. / <span class="text-blue-600 font-medium">Had</span> she <span class="text-blue-600 font-medium">been working</span>?</td>
+                                <td class="border border-slate-300 p-3 text-center"><button onclick="generateExamples('Past Perfect Continuous')" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600 transition-colors text-xs font-semibold">✨ Generate</button></td>
+                            </tr>
+                            <tr class="bg-white">
+                                <td class="border border-slate-300 p-3 font-semibold">Future Perfect Continuous</td>
+                                <td class="border border-slate-300 p-3 font-mono bg-slate-50">S + will have been + V-ing</td>
+                                <td class="border border-slate-300 p-3">By 5pm, I <span class="text-green-600 font-medium">will have been teaching</span> for 3 hrs. / I <span class="text-red-600 font-medium">won’t have been teaching</span>. / <span class="text-blue-600 font-medium">Will</span> I <span class="text-blue-600 font-medium">have been teaching</span>?</td>
+                                <td class="border border-slate-300 p-3 text-center"><button onclick="generateExamples('Future Perfect Continuous')" class="bg-purple-500 text-white px-3 py-1 rounded-md hover:bg-purple-600 transition-colors text-xs font-semibold">✨ Generate</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <!-- Gemini Feature: Sentence Analyzer -->
+            <section class="border-2 border-dashed border-sky-400 rounded-xl p-4 md:p-6 bg-sky-50/50">
+                <h2 class="text-2xl font-bold text-sky-700 mb-2">✨ Gemini Sentence Analyzer</h2>
+                <p class="text-slate-600 mb-4">Type a sentence below and let the AI identify the tense and check your grammar.</p>
+                <div class="space-y-4">
+                    <textarea id="sentenceInput" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition" rows="3" placeholder="e.g., He has been playing cricket since morning..."></textarea>
+                    <button id="analyzeButton" onclick="analyzeSentence()" class="w-full sm:w-auto bg-sky-500 text-white px-6 py-2 rounded-lg hover:bg-sky-600 transition-colors font-semibold flex items-center justify-center gap-2">
+                        Analyze Sentence
+                    </button>
+                    <div id="analysisResult" class="p-4 bg-white rounded-lg border border-slate-200 min-h-[50px]">
+                        <!-- Analysis will appear here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Other sections remain the same -->
+            <section class="border-2 border-slate-300 rounded-xl p-4 md:p-6 bg-slate-50/50">
+                <h2 class="text-2xl font-bold text-teal-700 mb-1">III. Modal Continuous Forms</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse text-sm md:text-base">
+                        <thead class="bg-teal-100 text-teal-800">
+                            <tr>
+                                <th class="border border-slate-300 p-3 font-semibold text-left">Modal</th>
+                                <th class="border border-slate-300 p-3 font-semibold text-left">Meaning</th>
+                                <th class="border border-slate-300 p-3 font-semibold text-left">Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white">
+                                <td class="border border-slate-300 p-3 font-semibold">may be</td>
+                                <td class="border border-slate-300 p-3">possibility</td>
+                                <td class="border border-slate-300 p-3">She <span class="text-green-600 font-medium">may be sleeping</span> now.</td>
+                            </tr>
+                            <tr class="bg-white">
+                                <td class="border border-slate-300 p-3 font-semibold">might be</td>
+                                <td class="border border-slate-300 p-3">weak possibility</td>
+                                <td class="border border-slate-300 p-3">He <span class="text-green-600 font-medium">might be watching</span> TV.</td>
+                            </tr>
+                            <tr class="bg-white">
+                                <td class="border border-slate-300 p-3 font-semibold">would be</td>
+                                <td class="border border-slate-300 p-3">hypothetical / future-in-past</td>
+                                <td class="border border-slate-300 p-3">If free, I <span class="text-green-600 font-medium">would be helping</span> you.</td>
+                            </tr>
+                            <tr class="bg-white">
+                                <td class="border border-slate-300 p-3 font-semibold">must be</td>
+                                <td class="border border-slate-300 p-3">strong guess / certainty</td>
+                                <td class="border border-slate-300 p-3">She <span class="text-green-600 font-medium">must be studying</span> — light on hai.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <section class="border-2 border-slate-300 rounded-xl p-4 md:p-6 bg-slate-50/50">
+                <h2 class="text-2xl font-bold text-green-700 mb-4">Subject & Helping Verb Guide</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse text-sm md:text-base">
+                        <thead class="bg-green-100 text-green-800">
+                            <tr>
+                                <th class="border border-slate-300 p-3 font-semibold text-left">Helping Verb</th>
+                                <th class="border border-slate-300 p-3 font-semibold text-left">Use With Subjects</th>
+                                <th class="border border-slate-300 p-3 font-semibold text-left">Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white">
+                                <td class="border border-slate-300 p-3 font-mono bg-slate-50">is / has been</td>
+                                <td class="border border-slate-300 p-3 font-semibold">He, She, It, Name (Singular)</td>
+                                <td class="border border-slate-300 p-3"><b>He is</b> playing.</td>
+                            </tr>
+                            <tr class="bg-white">
+                                <td class="border border-slate-300 p-3 font-mono bg-slate-50">am</td>
+                                <td class="border border-slate-300 p-3 font-semibold">I</td>
+                                <td class="border border-slate-300 p-3"><b>I am</b> playing.</td>
+                            </tr>
+                            <tr class="bg-white">
+                                <td class="border border-slate-300 p-3 font-mono bg-slate-50">are / have been</td>
+                                <td class="border border-slate-300 p-3 font-semibold">You, We, They (Plural)</td>
+                                <td class="border border-slate-300 p-3"><b>We are</b> playing.</td>
+                            </tr>
+                             <tr class="bg-white">
+                                <td class="border border-slate-300 p-3 font-mono bg-slate-50">was</td>
+                                <td class="border border-slate-300 p-3 font-semibold">I, He, She, It, Name (Singular)</td>
+                                <td class="border border-slate-300 p-3"><b>She was</b> playing.</td>
+                            </tr>
+                            <tr class="bg-white">
+                                <td class="border border-slate-300 p-3 font-mono bg-slate-50">were</td>
+                                <td class="border border-slate-300 p-3 font-semibold">You, We, They (Plural)</td>
+                                <td class="border border-slate-300 p-3"><b>They were</b> playing.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-4 p-3 bg-slate-100 rounded-lg text-sm md:text-base text-slate-700">
+                    <p><b class="font-semibold">Note:</b> The helping verbs <b class="font-mono">had been</b>, <b class="font-mono">will be</b>, <b class="font-mono">will have been</b>, and all <b class="font-semibold">Modals</b> are used with <b class="font-semibold">ALL</b> subjects.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Modal for Generated Examples -->
+    <div id="exampleModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl shadow-2xl p-6 w-full max-w-lg transform transition-all scale-95 opacity-0" id="modalContent">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold text-slate-800" id="modalTitle">Generated Examples</h3>
+                <button onclick="closeModal()" class="text-slate-500 hover:text-slate-800">&times;</button>
+            </div>
+            <div id="modalBody" class="space-y-3">
+                <!-- Generated examples will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- Gemini API Configuration ---
+        const API_KEY = ""; // Leave this empty, it will be handled by the environment
+        const API_URL_GEMINI = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${API_KEY}`;
+        
+        // --- Modal Handling ---
+        const modal = document.getElementById('exampleModal');
+        const modalContent = document.getElementById('modalContent');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalBody = document.getElementById('modalBody');
+
+        function openModal() {
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modalContent.classList.remove('scale-95', 'opacity-0');
+            }, 10);
+        }
+
+        function closeModal() {
+            modalContent.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 200);
+        }
+
+        // Close modal if clicking outside of it
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+
+        // --- API Call Functions ---
+
+        /**
+         * Generic function to call the Gemini API with exponential backoff.
+         */
+        async function callGemini(payload, maxRetries = 3) {
+            let attempt = 0;
+            while (attempt < maxRetries) {
+                try {
+                    const response = await fetch(API_URL_GEMINI, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    
+                    const result = await response.json();
+                    
+                    if (result.candidates && result.candidates.length > 0 &&
+                        result.candidates[0].content && result.candidates[0].content.parts &&
+                        result.candidates[0].content.parts.length > 0) {
+                        return result.candidates[0].content.parts[0].text;
+                    } else {
+                        throw new Error("Invalid response structure from API.");
+                    }
+                } catch (error) {
+                    console.error(`Attempt ${attempt + 1} failed:`, error);
+                    attempt++;
+                    if (attempt >= maxRetries) {
+                        return null; // Return null after all retries fail
+                    }
+                    const delay = Math.pow(2, attempt) * 1000; // 1s, 2s, 4s
+                    await new Promise(res => setTimeout(res, delay));
+                }
+            }
+            return null;
+        }
+
+        /**
+         * Generates example sentences for a given tense.
+         */
+        async function generateExamples(tenseName) {
+            modalTitle.textContent = `Examples for ${tenseName}`;
+            modalBody.innerHTML = '<div class="flex justify-center items-center p-8"><div class="loader"></div></div>';
+            openModal();
+
+            const prompt = `Generate 3 new, distinct example sentences for the "${tenseName}" tense in English. Provide one positive, one negative, and one interrogative (question) sentence. Format the response as a valid JSON object with three keys: "positive", "negative", and "interrogative".`;
+            
+            const payload = {
+                contents: [{ role: "user", parts: [{ text: prompt }] }],
+                generationConfig: {
+                    responseMimeType: "application/json",
+                    responseSchema: {
+                        type: "OBJECT",
+                        properties: {
+                            "positive": { "type": "STRING" },
+                            "negative": { "type": "STRING" },
+                            "interrogative": { "type": "STRING" }
+                        },
+                        required: ["positive", "negative", "interrogative"]
+                    }
+                }
+            };
+            
+            const resultText = await callGemini(payload);
+
+            if (resultText) {
+                try {
+                    const data = JSON.parse(resultText);
+                    modalBody.innerHTML = `
+                        <p class="p-3 bg-green-100 text-green-800 rounded-lg"><strong class="font-semibold">[+] Positive:</strong> ${data.positive}</p>
+                        <p class="p-3 bg-red-100 text-red-800 rounded-lg"><strong class="font-semibold">[-] Negative:</strong> ${data.negative}</p>
+                        <p class="p-3 bg-blue-100 text-blue-800 rounded-lg"><strong class="font-semibold">[?] Question:</strong> ${data.interrogative}</p>
+                    `;
+                } catch (e) {
+                    modalBody.innerHTML = '<p class="text-red-500">Error: Could not parse the generated examples.</p>';
+                }
+            } else {
+                modalBody.innerHTML = '<p class="text-red-500">Sorry, could not generate examples at this time. Please try again later.</p>';
+            }
+        }
+
+        /**
+         * Analyzes a user-provided sentence.
+         */
+        async function analyzeSentence() {
+            const sentenceInput = document.getElementById('sentenceInput');
+            const resultDiv = document.getElementById('analysisResult');
+            const analyzeButton = document.getElementById('analyzeButton');
+            const sentence = sentenceInput.value.trim();
+
+            if (!sentence) {
+                resultDiv.innerHTML = '<p class="text-amber-700">Please enter a sentence to analyze.</p>';
+                return;
+            }
+
+            analyzeButton.disabled = true;
+            analyzeButton.innerHTML = '<div class="loader !w-5 !h-5 !border-2 !border-t-white"></div> Analyzing...';
+            resultDiv.innerHTML = '';
+
+            const prompt = `Analyze the following English sentence: "${sentence}". Identify the tense used (e.g., Present Continuous, Past Perfect Continuous). Explain the grammatical structure and why it corresponds to that tense. If the sentence is grammatically incorrect, provide a correction and explain the error. Format the response as a valid JSON object with keys: "identifiedTense" (string), "explanation" (string), "isCorrect" (boolean), and "correction" (string, or an empty string if correct).`;
+
+            const payload = {
+                contents: [{ role: "user", parts: [{ text: prompt }] }],
+                generationConfig: {
+                    responseMimeType: "application/json",
+                    responseSchema: {
+                        type: "OBJECT",
+                        properties: {
+                            "identifiedTense": { "type": "STRING" },
+                            "explanation": { "type": "STRING" },
+                            "isCorrect": { "type": "BOOLEAN" },
+                            "correction": { "type": "STRING" }
+                        },
+                        required: ["identifiedTense", "explanation", "isCorrect", "correction"]
+                    }
+                }
+            };
+
+            const resultText = await callGemini(payload);
+
+            if (resultText) {
+                try {
+                    const data = JSON.parse(resultText);
+                    let html = `
+                        <p class="mb-2"><strong class="font-semibold text-slate-700">Identified Tense:</strong> <span class="font-medium text-sky-700 bg-sky-100 px-2 py-1 rounded">${data.identifiedTense}</span></p>
+                        <p class="mb-2"><strong class="font-semibold text-slate-700">Explanation:</strong> ${data.explanation}</p>
+                    `;
+                    if (!data.isCorrect) {
+                        html += `<div class="mt-3 p-3 bg-red-100 text-red-800 rounded-lg">
+                                    <p><strong class="font-semibold">Correction:</strong> ${data.correction}</p>
+                                 </div>`;
+                    } else {
+                         html += `<div class="mt-3 p-3 bg-green-100 text-green-800 rounded-lg">
+                                    <p><strong class="font-semibold">Grammar Check:</strong> The sentence appears to be grammatically correct.</p>
+                                 </div>`;
+                    }
+                    resultDiv.innerHTML = html;
+                } catch (e) {
+                    resultDiv.innerHTML = '<p class="text-red-500">Error: Could not parse the analysis.</p>';
+                }
+            } else {
+                resultDiv.innerHTML = '<p class="text-red-500">Sorry, could not analyze the sentence at this time. Please try again later.</p>';
+            }
+
+            analyzeButton.disabled = false;
+            analyzeButton.innerHTML = 'Analyze Sentence';
+        }
+
+    </script>
+</body>
+</html>
