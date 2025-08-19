@@ -238,8 +238,7 @@
 
     <script>
         // --- Gemini API Configuration ---
-        const API_KEY = "AIzaSyAShMOROH9OYV0VI9L3DajfZIdWUWb-g0I"; // Leave this empty, it will be handled by the environment
-        const API_URL_GEMINI = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${API_KEY}`;
+        const API_KEY = "AIzaSyAShMOROH9OYV0VI9L3DajfZIdWUWb-g0I"; // PASTE YOUR NEW API KEY HERE
         
         // --- Modal Handling ---
         const modal = document.getElementById('exampleModal');
@@ -274,6 +273,10 @@
          * Generic function to call the Gemini API with exponential backoff.
          */
         async function callGemini(payload, maxRetries = 3) {
+            if (!API_KEY) {
+                return Promise.resolve(JSON.stringify({ error: "API_KEY_MISSING" }));
+            }
+            const API_URL_GEMINI = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${API_KEY}`;
             let attempt = 0;
             while (attempt < maxRetries) {
                 try {
@@ -340,6 +343,10 @@
             if (resultText) {
                 try {
                     const data = JSON.parse(resultText);
+                    if (data.error === "API_KEY_MISSING") {
+                         modalBody.innerHTML = '<p class="text-amber-700">Please add your Google AI API key to the code to use this feature.</p>';
+                         return;
+                    }
                     modalBody.innerHTML = `
                         <p class="p-3 bg-green-100 text-green-800 rounded-lg"><strong class="font-semibold">[+] Positive:</strong> ${data.positive}</p>
                         <p class="p-3 bg-red-100 text-red-800 rounded-lg"><strong class="font-semibold">[-] Negative:</strong> ${data.negative}</p>
@@ -349,7 +356,7 @@
                     modalBody.innerHTML = '<p class="text-red-500">Error: Could not parse the generated examples.</p>';
                 }
             } else {
-                modalBody.innerHTML = '<p class="text-red-500">Sorry, could not generate examples at this time. Please try again later.</p>';
+                modalBody.innerHTML = '<p class="text-red-500">Sorry, could not generate examples at this time. Please check your API key and try again.</p>';
             }
         }
 
@@ -395,6 +402,12 @@
             if (resultText) {
                 try {
                     const data = JSON.parse(resultText);
+                     if (data.error === "API_KEY_MISSING") {
+                         resultDiv.innerHTML = '<p class="text-amber-700">Please add your Google AI API key to the code to use this feature.</p>';
+                         analyzeButton.disabled = false;
+                         analyzeButton.innerHTML = 'Analyze Sentence';
+                         return;
+                    }
                     let html = `
                         <p class="mb-2"><strong class="font-semibold text-slate-700">Identified Tense:</strong> <span class="font-medium text-sky-700 bg-sky-100 px-2 py-1 rounded">${data.identifiedTense}</span></p>
                         <p class="mb-2"><strong class="font-semibold text-slate-700">Explanation:</strong> ${data.explanation}</p>
@@ -413,7 +426,7 @@
                     resultDiv.innerHTML = '<p class="text-red-500">Error: Could not parse the analysis.</p>';
                 }
             } else {
-                resultDiv.innerHTML = '<p class="text-red-500">Sorry, could not analyze the sentence at this time. Please try again later.</p>';
+                resultDiv.innerHTML = '<p class="text-red-500">Sorry, could not analyze the sentence. Please check your API key and try again.</p>';
             }
 
             analyzeButton.disabled = false;
